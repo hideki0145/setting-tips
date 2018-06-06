@@ -1,0 +1,12 @@
+{
+    // 共通設定
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.renderWhitespace": "all",
+    "files.autoGuessEncoding": true,
+    "files.eol": "\n",
+    // 言語別設定
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.rulers": [80],
+    },
+}
