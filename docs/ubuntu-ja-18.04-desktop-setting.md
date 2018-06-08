@@ -63,8 +63,11 @@
 
   ```sh
   sudo apt install git -y
+  # 基本設定
   git config --global user.name "User Name"
   git config --global user.email "username@example.com"
+  # global .gitignore設定
+  vi ~/.config/git/ignore
   ```
 
 - SSH鍵の作成
@@ -80,22 +83,3 @@
       IdentityFile ~/.ssh/id_rsa_filename
       IdentitiesOnly yes
   ```
-
-- VSCodeのインストール
-  - <https://code.visualstudio.com/Download>からdebパッケージをダウンロード
-
-  ```sh
-  cd (debパッケージダウンロード先)
-
-  # パッケージが足りない場合は適宜インストール
-  # 以下は例
-  sudo apt install libgconf-2-4 -y
-  sudo apt --fix-broken install
-
-  sudo dpkg -i filename.deb
-  ```
-
-  - VSCodeの設定
-    - `~/.config/Code/User/settings.json`の設定
-    - 拡張機能のインストール
-      - Japanese Language Pack for Visual Studio Code
