@@ -56,7 +56,10 @@
 - Vimのインストール
 
   ```sh
+  # CLI版
   sudo apt install vim -y
+  # GUI版
+  sudo apt install vim-gnome -y
   ```
 
 - Gitのインストール
