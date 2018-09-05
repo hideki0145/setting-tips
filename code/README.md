@@ -27,6 +27,7 @@ Tips for **Visual Studio Code** settings.
   - Japanese Language Pack for Visual Studio Code
   - markdownlint
   - Python
+  - Ruby
 - global .gitignoreの設定
   - `.vscode`ディレクトリを常に除外するよう設定
 
