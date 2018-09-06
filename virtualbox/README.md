@@ -43,3 +43,10 @@ Tips for **Oracle VM VirtualBox** settings.
   - [設定]-[ユーザーインターフェース]  
     スクリーンの上部に表示：チェックなし⇒チェックあり
     ステータスバーを有効にする：チェックあり⇒チェックなし
+
+- Guest Additionsのインストール
+  - Debian, Ubuntu
+    1. `sudo apt install gcc make perl`を実行
+    2. [デバイス]-[Guest Additions CDイメージの挿入...]を押下
+    3. ポップアップに従ってインストール
+    4. ゲストOSの再起動
