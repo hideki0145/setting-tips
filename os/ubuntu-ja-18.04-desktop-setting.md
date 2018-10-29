@@ -27,16 +27,19 @@
 - システムの更新
 
   ```sh
-  sudo apt update && sudo apt -y upgrade && sudo apt -y dist-upgrade && sudo apt -y autoremove && sudo apt -y autoclean
+  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
+  # 必要に応じて実行する
+  sudo apt dist-upgrade -y
   ```
 
 - fcitx-mozcのインストール
 
   ```sh
-  sudo apt install fcitx-mozc -y
+  sudo apt install -y fcitx-mozc
   ```
 
   - fcitxの[設定]-[全体の設定]-[Show Advanced Options]  
+    入力メソッドのオンオフ：(使用する環境に合わせて任意に設定)  
     入力メソッドをオンに：(使用する環境に合わせて任意に設定)  
     入力メソッドをオフに：(使用する環境に合わせて任意に設定)
 
@@ -57,15 +60,15 @@
 
   ```sh
   # CLI版
-  sudo apt install vim -y
+  sudo apt install -y vim
   # GUI版
-  sudo apt install vim-gnome -y
+  sudo apt install -y vim-gnome
   ```
 
 - Gitのインストール
 
   ```sh
-  sudo apt install git -y
+  sudo apt install -y git
   # 基本設定
   git config --global user.name "User Name"
   git config --global user.email "username@example.com"
