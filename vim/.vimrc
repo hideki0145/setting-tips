@@ -3,6 +3,35 @@
 """"""""""""""""""""""""""""""
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
+""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" プラグインのセットアップ
+""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
+
+" ディレクトリのファイル一覧を表示する
+Plug 'scrooloose/nerdtree'
+" Rubyのendキーワードを自動挿入する
+Plug 'tpope/vim-endwise'
+" コメントON/OFFを手軽に実行する
+Plug 'tomtom/tcomment_vim'
+
+" インデントに色を付けて見易くする
+Plug 'nathanaelkane/vim-indent-guides'
+" Vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
+let g:indent_guides_enable_on_vim_startup=1
+" ガイドをスタートするインデントの量を指定する
+let g:indent_guides_start_level=2
+" ガイドの幅を指定する
+let g:indent_guides_guide_size=1
+" ガイドの色を指定する
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=red ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
+call plug#end()
+""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
 " 各種オプションの設定
@@ -18,3 +47,61 @@ set number
 set tabstop=2
 " Vimが挿入するインデントの幅を変更する
 set shiftwidth=2
+" カラースキーマを指定する
+colorscheme desert
+""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" 全角スペースの表示
+" https://qiita.com/jnchito/items/5141b3b01bced9f7f48f
+" https://inari111.hatenablog.com/entry/2014/05/05/231307
+""""""""""""""""""""""""""""""
+function! ZenkakuSpace()
+  highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
+endfunction
+
+if has('syntax')
+  augroup ZenkakuSpace
+    autocmd!
+    autocmd ColorScheme * call ZenkakuSpace()
+    autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('ZenkakuSpace','　')
+  augroup END
+  call ZenkakuSpace()
+endif
+""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" 挿入モード時、ステータスラインの色を変更
+" https://qiita.com/jnchito/items/5141b3b01bced9f7f48f
+" https://sites.google.com/site/fudist/Home/vim-nihongo-ban/vim-color#color-insertmode
+""""""""""""""""""""""""""""""
+let g:hi_insert='highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
+
+if has('syntax')
+  augroup InsertHook
+    autocmd!
+    autocmd InsertEnter * call s:StatusLine('Enter')
+    autocmd InsertLeave * call s:StatusLine('Leave')
+  augroup END
+endif
+
+let s:slhlcmd=''
+function! s:StatusLine(mode)
+  if a:mode == 'Enter'
+    silent! let s:slhlcmd='highlight '.s:GetHighlight('StatusLine')
+    silent exec g:hi_insert
+  else
+    highlight clear StatusLine
+    silent exec s:slhlcmd
+  endif
+endfunction
+
+function! s:GetHighlight(hi)
+  redir => hl
+    exec 'highlight '.a:hi
+  redir END
+  let hl=substitute(hl,'[\r\n]','','g')
+  let hl=substitute(hl,'xxx','','')
+  return hl
+endfunction
+""""""""""""""""""""""""""""""
