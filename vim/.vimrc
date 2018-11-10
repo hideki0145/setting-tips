@@ -40,7 +40,7 @@ call plug#end()
 set expandtab
 " タブ、空白、改行を可視化する
 set list
-set listchars=tab:»-,trail:_,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:»-,trail:_,extends:»,precedes:«,nbsp:%
 " 行番号を表示する
 set number
 " タブ文字の表示幅を変更する
