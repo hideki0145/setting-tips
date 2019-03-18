@@ -20,6 +20,8 @@ Tips for **Ruby** settings.
 
   # インストールできるRubyバージョンの確認
   rbenv install --list
+  # 推奨されるビルド環境の構築(https://github.com/rbenv/ruby-build/wiki)
+  sudo apt install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev
   # 任意のバージョンをインストール
   rbenv install x.x.x
   # インストールできたことを確認
