@@ -23,12 +23,6 @@ Tips for **Visual Studio Code** settings.
 
 ## Setting
 
-- Windows
-  - `%APPDATA%\Code\User\settings.json`の設定
-
-- Debian, Ubuntu
-  - `~/.config/Code/User/settings.json`の設定
-
 - 拡張機能のインストール
   - Settings Sync
 
