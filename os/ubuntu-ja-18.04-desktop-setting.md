@@ -67,6 +67,12 @@
   sudo reboot
   ```
 
+- fcitxの[設定]-[入力メソッド]
+  1. Keyboard - Japanese：削除
+  2. Keyboard - English(US)：追加
+  3. Mozc  
+     既定のキーボードレイアウト：既定⇒(使用する環境に合わせて任意に設定)
+
 ## Setting
 
 - Vimのインストール
