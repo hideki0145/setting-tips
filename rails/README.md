@@ -54,7 +54,4 @@ Tips for **Ruby on Rails** settings.
   echo '/vendor/bundle' >> .gitignore
   # Railsプロジェクトの起動
   bundle exec rails server
-
-  # Rails開発用gemインストール
-  gem install solargraph ruby-debug-ide debase
   ```
