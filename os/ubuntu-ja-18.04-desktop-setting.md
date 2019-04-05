@@ -93,6 +93,20 @@
   git config --global user.email "username@example.com"
   # global .gitignore設定
   vi ~/.config/git/ignore
+  # deffツール設定
+  sudo apt install -y meld
+  vi ~/.gitconfig
+  ```
+
+  ```config:~/.gitconfig
+  [diff]
+    tool = meld
+  [difftool "meld"]
+    cmd = meld $LOCAL $REMOTE
+  [merge]
+    tool = meld
+  [mergetool "meld"]
+    cmd = meld $LOCAL $BASE $REMOTE --auto-merge
   ```
 
 - SSH鍵の作成
