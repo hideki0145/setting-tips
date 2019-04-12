@@ -91,6 +91,8 @@
   # 基本設定
   git config --global user.name "User Name"
   git config --global user.email "username@example.com"
+  git config --global color.ui auto
+  git config --global core.editor "code --wait"
   # global .gitignore設定
   vi ~/.config/git/ignore
   # deffツール設定
