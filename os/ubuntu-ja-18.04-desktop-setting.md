@@ -3,6 +3,12 @@
 ## Install
 
 - インストールウィザードの内容に沿ってセットアップ
+  - キーボードレイアウト  
+    日本語-日本語⇒(使用する環境に合わせて任意に設定)
+    > インストールウィザード上で設定できなかった場合、以下のコマンドで設定する
+
+    `sudo dpkg-reconfigure keyboard-configuration`
+
   - アップデートと他のソフトウェア  
     あらかじめどのアプリケーションをインストールしますか?：最小インストール  
     グラフィックスとWi-Fiハードウェアと追加の…：チェックなし
@@ -14,6 +20,22 @@
   - Ubuntuソフトウェア削除
   - ヘルプ削除
 - ネットワークの設定
+
+  ```yml:/etc/netplan/01-network-manager-all.yaml
+  # Let NetworkManager manage all devices on this system
+  network:
+    version: 2
+    renderer: NetworkManager
+
+    ethernets:
+      eth0:
+        dhcp4: false
+        addresses: [xxx.xxx.xxx.xxx/xx]
+        gateway4: xxx.xxx.xxx.xxx
+        nameservers:
+          addresses: [xxx.xxx.xxx.xxx]
+  ```
+
 - 不完全な言語サポートの実行
 - ホームディレクトリの英語化
 
@@ -52,7 +74,7 @@
   アイコンのサイズ：48⇒(使用する環境に合わせて任意に設定)  
   表示位置：Left⇒(使用する環境に合わせて任意に設定)
 - [地域と言語]-[入力ソース]  
-  日本語：登録済⇒(使用する環境に合わせて任意に設定)
+  日本語 又は 英語(US)：登録済⇒(使用する環境に合わせて任意に設定)
 - [地域と言語]-[インストールされている言語の管理]  
   キーボード入力に使うIMシステム：IBus⇒fcitx
 - [電源]-[省電力]  
@@ -68,8 +90,8 @@
   ```
 
 - fcitxの[設定]-[入力メソッド]
-  1. Keyboard - Japanese：削除
-  2. Keyboard - English(US)：追加
+  1. Keyboard - Japanese：(使用する環境に合わせて任意に設定)
+  2. Keyboard - English(US)：(使用する環境に合わせて任意に設定)
   3. Mozc  
      既定のキーボードレイアウト：既定⇒(使用する環境に合わせて任意に設定)
 
@@ -95,6 +117,14 @@
   git config --global core.editor "code --wait"
   # global .gitignore設定
   vi ~/.config/git/ignore
+  ```
+
+  ```config:~/.config/git/ignore
+  /.vscode/
+  .solargraph.yml
+  ```
+
+  ```sh
   # deffツール設定
   sudo apt install -y meld
   vi ~/.gitconfig
@@ -123,4 +153,24 @@
       User user
       IdentityFile ~/.ssh/id_rsa_filename
       IdentitiesOnly yes
+  ```
+
+- OpenSSH Serverのインストール
+
+  ```sh
+  sudo apt install -y openssh-server
+  ```
+
+  ```config:/etc/ssh/sshd_config
+    .
+    .
+  # アンコメントする
+  AuthorizedKeysFile     .ssh/authorized_keys .ssh/authorized_keys2
+    .
+    .
+  ```
+
+  ```sh
+  # SSHサービス再起動
+  sudo systemctl restart ssh
   ```
