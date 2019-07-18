@@ -25,4 +25,12 @@ Tips for **Node.js** settings.
   # rbenvで使用するRubyバージョンの設定
   rbenv use x.x.x
   node -v
+  
+  # yarnのインストール(https://yarnpkg.com/ja/docs/install#debian-stable)
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  sudo apt update
+  sudo apt-get install --no-install-recommends yarn
+  # yarn動作検証
+  yarn --version
   ```
