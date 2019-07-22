@@ -22,8 +22,8 @@ Tips for **Node.js** settings.
   nvm install --lts
   # インストールできたことを確認
   nvm ls
-  # rbenvで使用するRubyバージョンの設定
-  rbenv use x.x.x
+  # nvmで使用するNode.jsバージョンの設定
+  nvm use x.x.x
   node -v
   
   # yarnのインストール(https://yarnpkg.com/ja/docs/install#debian-stable)
