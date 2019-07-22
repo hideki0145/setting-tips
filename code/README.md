@@ -12,13 +12,7 @@ Tips for **Visual Studio Code** settings.
 
     ```sh
     cd (debパッケージダウンロード先)
-
-    # パッケージが足りない場合は適宜インストール
-    # 以下は例
-    # sudo apt install libgconf-2-4 -y
-    # sudo apt --fix-broken install
-
-    sudo dpkg -i filename.deb
+    sudo apt install ./filename.deb
     ```
 
 ## Setting
