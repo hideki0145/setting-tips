@@ -30,3 +30,14 @@ Tips for **Visual Studio Code** settings.
       .
       .
     ```
+
+- SSH Agentの設定
+  > Remote Development拡張機能を使用する際に必要
+  > <https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent>
+
+  ```PowerShell
+  # Make sure you're running as an Administrator
+  Set-Service ssh-agent -StartupType Automatic
+  Start-Service ssh-agent
+  Get-Service ssh-agent
+  ```
