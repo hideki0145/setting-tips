@@ -8,9 +8,12 @@ Tips for **Node.js** settings.
 
   ```sh
   # nvmのインストール(https://github.com/nvm-sh/nvm)
+  # [bashの場合]
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+  # [zshの場合]
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | zsh
   # シェルを再読み込み
-  source ~/.bashrc
+  source ~/.bashrc # or ~/.zshrc
   # nvm動作検証
   nvm --version
 

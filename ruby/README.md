@@ -10,11 +10,14 @@ Tips for **Ruby** settings.
   # rbenv/ruby-buildのインストール
   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
   git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-  # .bashrcの修正
+  # [bashの場合].bashrcの修正
   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
   echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+  # [zshの場合].zshrcの修正
+  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+  echo 'eval "$(rbenv init -)"' >> ~/.zshrc
   # シェルを再読み込み
-  source ~/.bashrc
+  source ~/.bashrc # or ~/.zshrc
   # rbenv-doctorでrbenv動作検証
   curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
