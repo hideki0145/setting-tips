@@ -33,3 +33,27 @@ Tips for **Z Shell** settings.
   # アップデート
   cd $ZPREZTODIR && git pull && git submodule update --init --recursive
   ```
+
+## Setting
+
+- modulesの追加
+
+  ```config:~/.zpreztorc
+    .
+    .
+  # Set the Prezto modules to load (browse modules).
+  # The order matters.
+  zstyle ':prezto:load' pmodule \
+    'environment' \
+    'terminal' \
+    'editor' \
+    'history' \
+    'directory' \
+    'spectrum' \
+    'utility' \
+    'completion' \
+    'git' \ # 追加
+    'prompt'
+    .
+    .
+  ```
