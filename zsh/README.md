@@ -36,7 +36,7 @@ Tips for **Z Shell** settings.
 
 ## Setting
 
-- ~/.zpreztorcの修正
+- `~/.zpreztorc`の修正
 
   ```config:~/.zpreztorc
     .
@@ -77,6 +77,26 @@ Tips for **Z Shell** settings.
   # Setting it to 'random' loads a random theme.
   # Auto set to 'off' on dumb terminals.
   zstyle ':prezto:module:prompt' theme 'pure'
+    .
+    .
+  #
+  # Utility
+  #
+
+  # Enabled safe options. This aliases cp, ln, mv and rm so that they prompt
+  # before deleting or overwriting files. Set to 'no' to disable this safer
+  # behavior.
+  zstyle ':prezto:module:utility' safe-ops 'no'
+  ```
+
+- `~/.zshrc`の修正
+
+  ```config:~/.zshrc
+    .
+    .
+  # Customize to your needs...
+  export EDITOR='vim'
+  export VISUAL='vim'
     .
     .
   ```
