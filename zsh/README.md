@@ -53,6 +53,11 @@ Tips for **Z Shell** settings.
     'utility' \
     'completion' \
     'git' \ # 追加
+    'ruby' \ # 追加
+    'rails' \ # 追加
+    'syntax-highlighting' \ # 追加
+    'history-substring-search' \ # 追加
+    'autosuggestions' \ # 追加
     'prompt'
     .
     .
