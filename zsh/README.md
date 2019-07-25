@@ -36,7 +36,7 @@ Tips for **Z Shell** settings.
 
 ## Setting
 
-- modulesの追加
+- ~/.zpreztorcの修正
 
   ```config:~/.zpreztorc
     .
@@ -59,6 +59,24 @@ Tips for **Z Shell** settings.
     'history-substring-search' \ # 追加
     'autosuggestions' \ # 追加
     'prompt'
+    .
+    .
+  #
+  # Editor
+  #
+
+  # Set the key mapping style to 'emacs' or 'vi'.
+  zstyle ':prezto:module:editor' key-bindings 'vi'
+    .
+    .
+  #
+  # Prompt
+  #
+
+  # Set the prompt theme to load.
+  # Setting it to 'random' loads a random theme.
+  # Auto set to 'off' on dumb terminals.
+  zstyle ':prezto:module:prompt' theme 'pure'
     .
     .
   ```
