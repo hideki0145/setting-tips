@@ -52,12 +52,14 @@ Tips for **Z Shell** settings.
     'spectrum' \
     'utility' \
     'completion' \
-    'git' \ # 追加
-    'ruby' \ # 追加
-    'rails' \ # 追加
-    'syntax-highlighting' \ # 追加
-    'history-substring-search' \ # 追加
-    'autosuggestions' \ # 追加
+    # ----- ここから追加 ----- #
+    'git' \
+    'ruby' \
+    'rails' \
+    'syntax-highlighting' \
+    'history-substring-search' \
+    'autosuggestions' \
+    # ----- ここまで追加 ----- #
     'prompt'
     .
     .
