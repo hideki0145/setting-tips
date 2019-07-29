@@ -52,6 +52,21 @@ colorscheme desert
 """"""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
+" モードによってカーソル形状変更
+" https://qiita.com/Linda_pp/items/9e0c94eb82b18071db34
+" https://qiita.com/usamik26/items/f733add9ca910f6c5784
+""""""""""""""""""""""""""""""
+if has('vim_starting')
+  " ノーマルモード時に点滅のブロックタイプのカーソル
+  let &t_EI.="\e[1 q"
+  " 挿入モード時に点滅の縦棒タイプのカーソル
+  let &t_SI.="\e[5 q"
+  " 置換モード時に点滅の下線タイプのカーソル
+  let &t_SR.="\e[3 q"
+endif
+""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
 " 全角スペースの表示
 " https://qiita.com/jnchito/items/5141b3b01bced9f7f48f
 " https://inari111.hatenablog.com/entry/2014/05/05/231307
