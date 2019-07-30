@@ -7,15 +7,24 @@ Tips for **Ruby** settings.
 - Debian, Ubuntu
 
   ```sh
-  # rbenv/ruby-buildのインストール
+  # rbenvのインストール(https://github.com/rbenv/rbenv)
   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+  # ruby-buildのインストール(https://github.com/rbenv/ruby-build)
   git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-  # [bashの場合].bashrcの修正
+
+  # シェルの設定
+  # [bashの場合]
   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-  # [zshの場合].zshrcの修正
+  # [zshの場合]
   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+  # 以下のコマンドで印刷された指示に従って設定
+  ~/.rbenv/bin/rbenv init
+  # 以下は一例
+  # [bashの場合]
+  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+  # [zshの場合]
   echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+
   # シェルを再読み込み
   source ~/.bashrc # or ~/.zshrc
   # rbenv-doctorでrbenv動作検証
