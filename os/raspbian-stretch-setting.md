@@ -27,7 +27,7 @@
     # [補足]
     # SDカードをイメージ化する場合
     # gpartedのインストール
-    sudo apt install gparted
+    sudo apt install -y gparted
     # gparted起動
     sudo gparted # SDカードのリサイズを行う
     # サイズの計算
@@ -104,9 +104,7 @@
 - パッケージの更新
 
   ```sh
-  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
-  # 必要に応じて実行する
-  sudo apt dist-upgrade -y
+  yes | (sudo apt update && sudo apt upgrade && sudo apt dist-upgrade && sudo apt autoremove && sudo apt autoclean)
   ```
 
 - fcitx-mozcのインストール
