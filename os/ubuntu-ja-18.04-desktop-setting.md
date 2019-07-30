@@ -52,9 +52,7 @@
 - システムの更新
 
   ```sh
-  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
-  # 必要に応じて実行する
-  sudo apt dist-upgrade -y
+  yes | (sudo apt update && sudo apt upgrade && sudo apt dist-upgrade && sudo apt autoremove && sudo apt autoclean)
   ```
 
 - fcitx-mozcのインストール
