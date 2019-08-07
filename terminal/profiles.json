@@ -8,17 +8,31 @@
         "keybindings" :
         [
             {
-                "command" : "closeTab",
+                "command" : "closePane",
                 "keys" :
                 [
-                    "ctrl+w"
+                    "ctrl+shift+w"
+                ]
+            },
+            {
+                "command" : "copy",
+                "keys" :
+                [
+                    "ctrl+shift+c"
+                ]
+            },
+            {
+                "command" : "duplicateTab",
+                "keys" :
+                [
+                    "ctrl+shift+d"
                 ]
             },
             {
                 "command" : "newTab",
                 "keys" :
                 [
-                    "ctrl+t"
+                    "ctrl+shift+t"
                 ]
             },
             {
@@ -99,6 +113,13 @@
                 ]
             },
             {
+                "command" : "paste",
+                "keys" :
+                [
+                    "ctrl+shift+v"
+                ]
+            },
+            {
                 "command" : "prevTab",
                 "keys" :
                 [
@@ -137,75 +158,78 @@
                 "command" : "switchToTab0",
                 "keys" :
                 [
-                    "alt+1"
+                    "ctrl+alt+1"
                 ]
             },
             {
                 "command" : "switchToTab1",
                 "keys" :
                 [
-                    "alt+2"
+                    "ctrl+alt+2"
                 ]
             },
             {
                 "command" : "switchToTab2",
                 "keys" :
                 [
-                    "alt+3"
+                    "ctrl+alt+3"
                 ]
             },
             {
                 "command" : "switchToTab3",
                 "keys" :
                 [
-                    "alt+4"
+                    "ctrl+alt+4"
                 ]
             },
             {
                 "command" : "switchToTab4",
                 "keys" :
                 [
-                    "alt+5"
+                    "ctrl+alt+5"
                 ]
             },
             {
                 "command" : "switchToTab5",
                 "keys" :
                 [
-                    "alt+6"
+                    "ctrl+alt+6"
                 ]
             },
             {
                 "command" : "switchToTab6",
                 "keys" :
                 [
-                    "alt+7"
+                    "ctrl+alt+7"
                 ]
             },
             {
                 "command" : "switchToTab7",
                 "keys" :
                 [
-                    "alt+8"
+                    "ctrl+alt+8"
                 ]
             },
             {
                 "command" : "switchToTab8",
                 "keys" :
                 [
-                    "alt+9"
+                    "ctrl+alt+9"
                 ]
             }
         ],
         "requestedTheme" : "system",
         "showTabsInTitlebar" : true,
-        "showTerminalTitleInTitlebar" : true
+        "showTerminalTitleInTitlebar" : true,
+        "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
     },
     "profiles" :
     [
         {
             "acrylicOpacity" : 0.5,
             "background" : "#012456",
+            "backgroundImage" : "C:\\Windows\\Web\\Wallpaper\\Windows\\img0.jpg",
+            "backgroundImageOpacity" : 0.5,
             "closeOnExit" : true,
             "colorScheme" : "One Half Dark",
             "commandline" : "powershell.exe",
@@ -220,12 +244,12 @@
             "padding" : "0, 0, 0, 0",
             "snapOnInput" : true,
             "startingDirectory" : "%USERPROFILE%",
-            "useAcrylic" : false,
-            "backgroundImage" : "C:\\Windows\\Web\\Wallpaper\\Windows\\img0.jpg",
-            "backgroundImageOpacity" : 0.5
+            "useAcrylic" : false
         },
         {
             "acrylicOpacity" : 0.75,
+            "backgroundImage" : "C:\\Windows\\Web\\Wallpaper\\Windows\\img0.jpg",
+            "backgroundImageOpacity" : 0.5,
             "closeOnExit" : true,
             "colorScheme" : "One Half Dark",
             "commandline" : "cmd.exe",
@@ -240,12 +264,31 @@
             "padding" : "0, 0, 0, 0",
             "snapOnInput" : true,
             "startingDirectory" : "%USERPROFILE%",
-            "useAcrylic" : false,
-            "backgroundImage" : "C:\\Windows\\Web\\Wallpaper\\Windows\\img0.jpg",
-            "backgroundImageOpacity" : 0.5
+            "useAcrylic" : false
+        },
+        {
+            "acrylicOpacity" : 0.84999999999999998,
+            "closeOnExit" : false,
+            "colorScheme" : "Solarized Dark",
+            "commandline" : "Azure",
+            "connectionType" : "{d9fcfdfa-a479-412c-83b7-c5640e61cd62}",
+            "cursorColor" : "#FFFFFF",
+            "cursorShape" : "bar",
+            "fontFace" : "Consolas",
+            "fontSize" : 10,
+            "guid" : "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+            "historySize" : 9001,
+            "icon" : "ms-appx:///ProfileIcons/{b453ae62-4e3d-5e58-b989-0a998ec441b8}.png",
+            "name" : "Azure Cloud Shell",
+            "padding" : "0, 0, 0, 0",
+            "snapOnInput" : true,
+            "startingDirectory" : "%USERPROFILE%",
+            "useAcrylic" : true
         },
         {
             "acrylicOpacity" : 0.5,
+            "backgroundImage" : "C:\\Windows\\Web\\Wallpaper\\Windows\\img0.jpg",
+            "backgroundImageOpacity" : 0.5,
             "closeOnExit" : true,
             "colorScheme" : "One Half Dark",
             "commandline" : "wsl.exe -d Ubuntu",
@@ -260,9 +303,7 @@
             "padding" : "0, 0, 0, 0",
             "snapOnInput" : true,
             "startingDirectory" : "//wsl$/Ubuntu/home/hideki",
-            "useAcrylic" : false,
-            "backgroundImage" : "C:\\Windows\\Web\\Wallpaper\\Windows\\img0.jpg",
-            "backgroundImageOpacity" : 0.5
+            "useAcrylic" : false
         }
     ],
     "schemes" :
@@ -287,6 +328,27 @@
             "red" : "#C50F1F",
             "white" : "#CCCCCC",
             "yellow" : "#C19C00"
+        },
+        {
+            "background" : "#000000",
+            "black" : "#000000",
+            "blue" : "#000080",
+            "brightBlack" : "#808080",
+            "brightBlue" : "#0000FF",
+            "brightCyan" : "#00FFFF",
+            "brightGreen" : "#00FF00",
+            "brightPurple" : "#FF00FF",
+            "brightRed" : "#FF0000",
+            "brightWhite" : "#FFFFFF",
+            "brightYellow" : "#FFFF00",
+            "cyan" : "#008080",
+            "foreground" : "#C0C0C0",
+            "green" : "#008000",
+            "name" : "Vintage",
+            "purple" : "#800080",
+            "red" : "#800000",
+            "white" : "#C0C0C0",
+            "yellow" : "#808000"
         },
         {
             "background" : "#282C34",
