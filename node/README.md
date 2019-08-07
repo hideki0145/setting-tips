@@ -7,26 +7,37 @@ Tips for **Node.js** settings.
 - Debian, Ubuntu
 
   ```sh
-  # nvmのインストール(https://github.com/nvm-sh/nvm)
+  # nodenvのインストール(https://github.com/nodenv/nodenv)
+  git clone https://github.com/nodenv/nodenv.git ~/.nodenv
+  # node-buildのインストール(https://github.com/nodenv/node-build)
+  git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
+
+  # シェルの設定
   # [bashの場合]
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+  echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bashrc
   # [zshの場合]
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | zsh
+  echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
+  # 以下のコマンドで印刷された指示に従って設定
+  ~/.nodenv/bin/nodenv init
+  # 以下は一例
+  # [bashの場合]
+  echo 'eval "$(nodenv init -)"' >> ~/.bashrc
+  # [zshの場合]
+  echo 'eval "$(nodenv init -)"' >> ~/.zshrc
+
   # シェルを再読み込み
   source ~/.bashrc # or ~/.zshrc
-  # nvm動作検証
-  nvm --version
+  # nodenv-doctorでnodenv動作検証
+  curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
 
   # インストールできるNode.jsバージョンの確認
-  nvm ls-remote
-  nvm ls-remote --lts
+  nodenv install --list
   # 任意のバージョンをインストール
-  nvm install x.x.x
-  nvm install --lts
+  nodenv install x.x.x
   # インストールできたことを確認
-  nvm ls
-  # nvmで使用するNode.jsバージョンの設定
-  nvm use x.x.x
+  nodenv versions
+  # nodenvで使用するNode.jsバージョンの設定
+  nodenv global x.x.x
   node -v
   
   # yarnのインストール(https://yarnpkg.com/ja/docs/install#debian-stable)
