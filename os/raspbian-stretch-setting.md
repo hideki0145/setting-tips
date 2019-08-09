@@ -104,7 +104,7 @@
 - パッケージの更新
 
   ```sh
-  yes | (sudo apt update && sudo apt upgrade && sudo apt dist-upgrade && sudo apt autoremove && sudo apt autoclean)
+  sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
   ```
 
 - fcitx-mozcのインストール
