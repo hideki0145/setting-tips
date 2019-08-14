@@ -25,6 +25,9 @@ Tips for **anyenv** settings.
 
   # シェルを再読み込み
   source ~/.bashrc # or ~/.zshrc
+  # anyenv動作検証
+  anyenv --version
+
   # anyenvの初期化
   anyenv install --init
   # anyenv-updateのインストール(https://github.com/znz/anyenv-update)
@@ -33,6 +36,8 @@ Tips for **anyenv** settings.
   git clone https://github.com/znz/anyenv-git.git $(anyenv root)/plugins/anyenv-git
   # 推奨されるrbenvビルド環境の構築(https://github.com/rbenv/ruby-build/wiki)
   sudo apt install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev
+  # 推奨されるpyenvビルド環境の構築(https://github.com/pyenv/pyenv/wiki)
+  sudo apt install -y --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
   # インストールできる**envの確認
   anyenv install --list
