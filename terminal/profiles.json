@@ -2,6 +2,7 @@
     "globals" :
     {
         "alwaysShowTabs" : true,
+        "copyOnSelect" : false,
         "defaultProfile" : "{2c4de342-38b7-51cf-b940-2309a097f518}",
         "initialCols" : 120,
         "initialRows" : 30,
@@ -103,6 +104,13 @@
                 "keys" :
                 [
                     "ctrl+tab"
+                ]
+            },
+            {
+                "command" : "openNewTabDropdown",
+                "keys" :
+                [
+                    "ctrl+shift+space"
                 ]
             },
             {
@@ -267,9 +275,9 @@
             "useAcrylic" : false
         },
         {
-            "acrylicOpacity" : 0.84999999999999998,
+            "acrylicOpacity" : 0.59999999999999998,
             "closeOnExit" : false,
-            "colorScheme" : "Solarized Dark",
+            "colorScheme" : "Vintage",
             "commandline" : "Azure",
             "connectionType" : "{d9fcfdfa-a479-412c-83b7-c5640e61cd62}",
             "cursorColor" : "#FFFFFF",
