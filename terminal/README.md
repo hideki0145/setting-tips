@@ -2,6 +2,18 @@
 
 Tips for **Terminal** settings.
 
+## Hyper
+
+### Install
+
+- Windows
+  - インストーラーからインストール
+
+### Setting
+
+- Windows
+  - `.hyper.js`の設定
+
 ## Windows Terminal
 
 ### Install
