@@ -9,10 +9,10 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 15,
 
     // font family with optional fallbacks
-    fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"HackGen Console for Powerline", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -33,10 +33,10 @@ module.exports = {
     cursorAccentColor: '#000',
 
     // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
-    cursorShape: 'BLOCK',
+    cursorShape: 'BEAM',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: '#fff',
@@ -103,11 +103,11 @@ module.exports = {
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: '',
+    shell: 'C:\\Windows\\System32\\wsl.exe',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
-    shellArgs: ['--login'],
+    shellArgs: ['~'],
 
     // for environment variables
     env: {},
@@ -123,7 +123,7 @@ module.exports = {
 
     // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
     // selection is present (`true` by default on Windows and disables the context menu feature)
-    quickEdit: false,
+    quickEdit: true,
 
     // choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
     // or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
@@ -138,6 +138,26 @@ module.exports = {
     webGLRenderer: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+    overlay: {
+      alwaysOnTop: true,
+      animate: false,
+      hasShadow: false,
+      hideDock: false,
+      hideOnBlur: false,
+      hotkeys: ['Ctrl+F12'],
+      position: 'right',
+      primaryDisplay: false,
+      resizable: true,
+      size: 0.4,
+      startAlone: true,
+      startup: false,
+      tray: true,
+      unique: false,
+    },
+    opacity: {
+      focus: 1,
+      blur: 0.6,
+    },
   },
 
   // a list of plugins to fetch and install from npm
@@ -146,7 +166,13 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [],
+  plugins: [
+    'hyperlinks',
+    'hyperterm-overlay',
+    'hyper-ayu',
+    'hyper-opacity',
+    'hyper-tab-icons',
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
