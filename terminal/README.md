@@ -2,26 +2,22 @@
 
 Tips for **Terminal** settings.
 
-## Hyper
-
-### Install
+## Hyper Install
 
 - Windows
   - インストーラーからインストール
 
-### Setting
+## Hyper Setting
 
 - Windows
   - `.hyper.js`の設定
 
-## Windows Terminal
-
-### Install
+## Windows Terminal Install
 
 - Windows
   - Microsoft Storeからインストール
 
-### Setting
+## Windows Terminal Setting
 
 - Windows
   - `profiles.json`の設定
