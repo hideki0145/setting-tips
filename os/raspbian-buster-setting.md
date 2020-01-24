@@ -10,7 +10,7 @@
   <http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian/images/>
 - ダウンロードしたファイルをSDカードに書き込み
   - Windows
-    - Win32DiskImagerを使用
+    - balenaEtcherを使用
 - SSHの有効化  
   「/boot/ssh」ファイルを作成  
   エクスプローラーからSDカードのbootフォルダに直接作成
@@ -21,10 +21,10 @@
   - /etc/dhcpcd.confの編集  
     設定ファイルの末尾に以下を追加
 
-    ```conf:/etc.dhcpcd.conf
+    ```conf:/etc/dhcpcd.conf
       .
       .
-    interface eth0
+    interface wlan0
     static ip_address=xxx.xxx.xxx.xxx/xx
     static routers=xxx.xxx.xxx.xxx
     static domain_name_servers=xxx.xxx.xxx.xxx xxx.xxx.xxx.xxx
@@ -61,6 +61,24 @@
 
   最後に再起動  
   `sudo reboot`
+
+- Wi-Fiの設定
+  - /etc/wpa_supplicant/wpa_supplicant.confの編集
+
+    ```conf:/etc/wpa_supplicant/wpa_supplicant.conf
+    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+    update_config=1
+    country=JP
+
+    network={
+            ssid="xxxxxxxxxx"
+            psk="xxxxxxxxxx"
+            scan_ssid=1
+    }
+    ```
+
+  > [参考]ステルスSSIDへの接続  
+  > <http://frontier-of-curiosity.org/2016/04/03/raspberry-pi%E3%82%92%E5%AE%B6%E3%81%AEwifi%E3%81%AB%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B/>
 
 - パッケージの更新
 
@@ -101,12 +119,29 @@
       IdentitiesOnly yes
   ```
 
+- OpenSSH Serverのインストール
+
+  ```sh
+  sudo apt install -y openssh-server
+  ```
+
+  ```config:/etc/ssh/sshd_config
+    .
+    .
+  # アンコメントする
+  AuthorizedKeysFile     .ssh/authorized_keys .ssh/authorized_keys2
+    .
+    .
+  ```
+
+  ```sh
+  # SSHサービス再起動
+  sudo systemctl restart ssh
+  ```
+
 - リモートデスクトップ接続の準備
 
   ```sh
   sudo apt install -y tightvncserver
   sudo apt install -y xrdp
   ```
-
-- [参考]ステルスSSIDへの接続  
-  <http://frontier-of-curiosity.org/2016/04/03/raspberry-pi%E3%82%92%E5%AE%B6%E3%81%AEwifi%E3%81%AB%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B/>

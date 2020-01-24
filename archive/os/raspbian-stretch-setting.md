@@ -48,7 +48,7 @@
   - /etc/dhcpcd.confの編集  
     設定ファイルの末尾に以下を追加
 
-    ```conf:/etc.dhcpcd.conf
+    ```conf:/etc/dhcpcd.conf
     interface eth0
     static ip_address=xxx.xxx.xxx.xxx/xx
     static routers=xxx.xxx.xxx.xxx
