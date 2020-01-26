@@ -47,7 +47,7 @@ Tips for **Ruby on Rails** settings.
   # ([options]は適宜調整すること)
   bundle exec rails new . [options]
   # Gemfileは上書きする
-  Overwrite /home/miyamoto/Develop/expmple/Gemfile? (enter "h" for help) [Ynaqdhm] y
+  Overwrite /home/miyamoto/Develop/example/Gemfile? (enter "h" for help) [Ynaqdhm] y
 
   # Gitの管理対象からvendor/bundleディレクトリを外す
   echo '/vendor/bundle' >> .gitignore
