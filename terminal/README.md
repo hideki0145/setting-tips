@@ -20,4 +20,4 @@ Tips for **Terminal** settings.
 ## Windows Terminal Setting
 
 - Windows
-  - `profiles.json`の設定
+  - `settings.json`の設定
