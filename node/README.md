@@ -39,7 +39,7 @@ Tips for **Node.js** settings.
   # nodenvで使用するNode.jsバージョンの設定
   nodenv global x.x.x
   node -v
-  
+
   # yarnのインストール(https://yarnpkg.com/ja/docs/install#debian-stable)
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
