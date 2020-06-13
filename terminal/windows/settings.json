@@ -12,7 +12,7 @@
         "defaults":
         {
             "colorScheme": "One Half Dark",
-            "fontFace": "HackGen Console for Powerline",
+            "fontFace": "HackGenNerd Console",
             "useAcrylic": true,
             "acrylicOpacity": 0.9
         },
@@ -23,7 +23,7 @@
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
-                "hidden": false
+                "hidden": true
             },
             {
                 // Make changes here to the cmd.exe profile

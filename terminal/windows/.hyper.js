@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 15,
 
     // font family with optional fallbacks
-    fontFamily: '"HackGen Console for Powerline", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"HackGenNerd Console", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
