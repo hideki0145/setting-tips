@@ -134,7 +134,7 @@
   # 日本国内のリポジトリを参照
   sudo sed -i.bak -e "s/http:\/\/archive\.ubuntu\.com/http:\/\/jp\.archive\.ubuntu\.com/g" /etc/apt/sources.list
   sudo apt install -y language-pack-ja
-  sudo update-locale LANG=ja_JP.UTF8
+  sudo update-locale LANG=ja_JP.UTF-8
   exit # 一旦閉じる
   locale # ロケールの確認
   sudo apt install -y manpages-ja manpages-ja-dev
