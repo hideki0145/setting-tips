@@ -35,7 +35,9 @@ Tips for **anyenv** settings.
   # anyenv-gitのインストール(https://github.com/znz/anyenv-git)
   git clone https://github.com/znz/anyenv-git.git $(anyenv root)/plugins/anyenv-git
   # 推奨されるrbenvビルド環境の構築(https://github.com/rbenv/ruby-build/wiki)
-  sudo apt install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev
+  # Depending on your version of Ubuntu/Debian/Mint, libgdbm6 won't be available.
+  # In that case, try an earlier version such as libgdbm5.
+  sudo apt install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
   # 推奨されるpyenvビルド環境の構築(https://github.com/pyenv/pyenv/wiki)
   sudo apt install -y --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
