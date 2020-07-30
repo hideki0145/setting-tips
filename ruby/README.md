@@ -33,7 +33,9 @@ Tips for **Ruby** settings.
   # インストールできるRubyバージョンの確認
   rbenv install --list
   # 推奨されるビルド環境の構築(https://github.com/rbenv/ruby-build/wiki)
-  sudo apt install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev
+  # Depending on your version of Ubuntu/Debian/Mint, libgdbm6 won't be available.
+  # In that case, try an earlier version such as libgdbm5.
+  sudo apt install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
   # 任意のバージョンをインストール
   rbenv install x.x.x
   # インストールできたことを確認
