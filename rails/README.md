@@ -57,3 +57,14 @@ Tips for **Ruby on Rails** settings.
   # Railsプロジェクトの起動
   bin/rails server
   ```
+
+## Setting
+
+- Debian, Ubuntu
+  - Google Chromeのインストール(自動テスト用)
+
+    ```sh
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo apt install -y ./google-chrome-stable_current_amd64.deb
+    rm ./google-chrome-stable_current_amd64.deb
+    ```
