@@ -8,8 +8,11 @@ Tips for **Ruby on Rails** settings.
 
   ```sh
   # Railsに必要なパッケージのインストール
+  sudo apt install -y libsqlite3-dev
+  # (libpq-devはPostgreSQLを使用しないのであれば不要)
+  sudo apt install -y libpq-dev
   # (nodejsはnvmで別途インストール済みであれば不要)
-  sudo apt install -y libsqlite3-dev nodejs
+  sudo apt install -y nodejs
 
   # 事前にrbenvを使用してRubyのセットアップを行う
   # Rubyが参照しているgemのパスを念の為確認
