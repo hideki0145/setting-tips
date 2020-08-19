@@ -11,6 +11,7 @@
   "ruby.lint": {
     "rubocop": {
       "useBundler": true,
+      "forceExclusion": true,
     },
   },
 }
