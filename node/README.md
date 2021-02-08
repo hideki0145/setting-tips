@@ -40,11 +40,24 @@ Tips for **Node.js** settings.
   nodenv global x.x.x
   node -v
 
-  # yarnのインストール(https://yarnpkg.com/ja/docs/install#debian-stable)
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  sudo apt update
-  sudo apt install --no-install-recommends yarn
+  # yarn 2+のインストール(https://yarnpkg.com/getting-started/install#per-project-install)
+  npm install -g yarn
+  # プロジェクトディレクトリに移動
+  cd ~/path/to/project
+  # Yarn 2+に設定
+  yarn set version berry
+  # 最新バージョンへの更新
+  yarn set version latest
+
+  # yarn 1(Classic)のインストール(https://classic.yarnpkg.com/en/docs/install#debian-stable)
+  # [npm経由]
+  # npm install -g yarn
+  # [代替案]
+  # curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  # echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  # sudo apt update
+  # sudo apt install --no-install-recommends yarn
+
   # yarn動作検証
   yarn --version
   ```
