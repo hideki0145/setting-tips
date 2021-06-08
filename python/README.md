@@ -33,7 +33,7 @@ Tips for **Python** settings.
   # インストールできるPythonバージョンの確認
   pyenv install --list
   # 推奨されるビルド環境の構築(https://github.com/pyenv/pyenv/wiki)
-  sudo apt install -y --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+  sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
   # 任意のバージョンをインストール
   pyenv install x.x.x
   # インストールできたことを確認
