@@ -18,9 +18,8 @@ Tips for **Docker** settings.
   docker --version
 
   # Dockerグループに一般ユーザ追加
-  sudo gpasswd -a ${USER} docker
+  sudo usermod -aG docker $USER
   cat /etc/group | grep docker
-  sudo chmod 666 /var/run/docker.sock
 
   # Docker Composeのインストール(https://docs.docker.com/compose/install/)
   sudo mkdir -p /usr/local/lib/docker/cli-plugins/
