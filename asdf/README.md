@@ -9,7 +9,7 @@ Tips for **asdf** settings.
   ```sh
   # 依存関係のインストール
   sudo apt install -y curl git
-  # asdfのインストール(https://asdf-vm.com/#/core-manage-asdf?id=install)
+  # asdfのインストール(https://asdf-vm.com/guide/getting-started.html)
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf
   cd ~/.asdf
   git checkout "$(git describe --abbrev=0 --tags)"
