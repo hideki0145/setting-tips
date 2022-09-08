@@ -158,12 +158,12 @@
 
   ```sh
   # SSHサービス再起動
-  sudo systemctl restart ssh
+  sudo systemctl restart ssh.service
   exit
   # 以降、SSHパスワード認証にて作業
   ```
 
-- 鍵の転送
+- 公開鍵の転送
 
   ```sh
   # Ubuntu側操作
@@ -185,7 +185,9 @@
   sudo sed -i.bak -e "s/http:\/\/archive\.ubuntu\.com/http:\/\/jp\.archive\.ubuntu\.com/g" /etc/apt/sources.list
   sudo apt install -y language-pack-ja
   sudo update-locale LANG=ja_JP.UTF-8
-  exit # 一旦閉じる
-  locale # ロケールの確認
+  # 一旦閉じる
+  exit
+  # ロケールの確認
+  locale
   sudo apt install -y manpages-ja manpages-ja-dev
   ```
