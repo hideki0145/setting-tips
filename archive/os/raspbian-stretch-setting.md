@@ -29,7 +29,8 @@
     # gpartedのインストール
     sudo apt install -y gparted
     # gparted起動
-    sudo gparted # SDカードのリサイズを行う
+    # SDカードのリサイズを行う
+    sudo gparted
     # サイズの計算
     sudo fdisk /dev/xxx
     # コマンド:p

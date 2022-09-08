@@ -139,7 +139,7 @@
 
   ```sh
   # SSHサービス再起動
-  sudo systemctl restart ssh
+  sudo systemctl restart ssh.service
   ```
 
 - リモートデスクトップ接続の準備
