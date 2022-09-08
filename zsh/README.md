@@ -11,7 +11,8 @@ Tips for **Z Shell** settings.
   sudo apt install -y zsh
   # zsh動作検証
   zsh --version
-  exit # 一旦閉じる
+  # 一旦閉じる
+  exit
 
   # Preztoのインストール(https://github.com/sorin-ionescu/prezto#installation)
   # zsh起動
@@ -28,7 +29,8 @@ Tips for **Z Shell** settings.
   done
   # zshをデフォルトのシェルとして設定
   chsh -s $(which zsh)
-  exit # 閉じて開き直す
+  # 閉じて開き直す
+  exit
 
   # アップデート
   cd $ZPREZTODIR && git pull && git submodule update --init --recursive
