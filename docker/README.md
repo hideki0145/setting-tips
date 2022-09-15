@@ -23,7 +23,7 @@ Tips for **Docker** settings.
 
   # Docker Composeのインストール(https://docs.docker.com/compose/install/)
   sudo mkdir -p /usr/local/lib/docker/cli-plugins/
-  compose_version="$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep tag_name | sed -e 's/^.*"tag_name".*"\(.*\)".*$/\1/g')"
+  compose_version=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -Po '"tag_name": "\Kv[\d.]+')
   sudo curl -SL "https://github.com/docker/compose/releases/download/${compose_version}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/lib/docker/cli-plugins/docker-compose
   sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
   # Docker Compose動作検証
