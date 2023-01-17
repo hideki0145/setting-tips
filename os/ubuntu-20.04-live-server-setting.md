@@ -132,4 +132,7 @@
   # ロケールの確認
   locale
   sudo apt install -y manpages-ja manpages-ja-dev
+
+  # タイムゾーンの設定
+  sudo timedatectl set-timezone Asia/Tokyo
   ```
