@@ -20,5 +20,5 @@ Tips for **PostgreSQL** settings.
 - 開発環境用PostgreSQLロール作成
 
   ```sh
-  sudo su postgres -c "createuser -s $LOGNAME"
+  sudo -u postgres createuser -s $LOGNAME
   ```
