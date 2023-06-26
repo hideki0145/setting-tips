@@ -40,16 +40,16 @@ Tips for **Node.js** settings.
   nodenv global x.x.x
   node -v
 
-  # yarn 2+のインストール(https://yarnpkg.com/getting-started/install#per-project-install)
-  npm install -g yarn
+  # Yarn 2+のインストール(https://yarnpkg.com/getting-started/install#per-project-install)
+  corepack enable
   # プロジェクトディレクトリに移動
   cd ~/path/to/project
   # Yarn 2+に設定
-  yarn set version berry
+  yarn set version stable
   # 最新バージョンへの更新
   yarn set version latest
 
-  # yarn 1(Classic)のインストール(https://classic.yarnpkg.com/en/docs/install#debian-stable)
+  # Yarn 1(Classic)のインストール(https://classic.yarnpkg.com/en/docs/install#debian-stable)
   # [npm経由]
   # npm install -g yarn
   # [代替案]
@@ -58,6 +58,6 @@ Tips for **Node.js** settings.
   # sudo apt update
   # sudo apt install --no-install-recommends yarn
 
-  # yarn動作検証
+  # Yarn動作検証
   yarn --version
   ```
