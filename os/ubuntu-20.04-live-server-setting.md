@@ -58,11 +58,13 @@
   network:
     ethernets:
       eth0:
-        dhcp4: false
-        addresses: [xxx.xxx.xxx.xxx/xx]
+        addresses:
+          - xxx.xxx.xxx.xxx/xx
         gateway4: xxx.xxx.xxx.xxx
         nameservers:
-          addresses: [xxx.xxx.xxx.xxx]
+          addresses:
+            - xxx.xxx.xxx.xxx
+          search: []
     version: 2
   ```
 
