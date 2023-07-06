@@ -35,11 +35,12 @@ Tips for **anyenv** settings.
   # anyenv-gitのインストール(https://github.com/znz/anyenv-git)
   git clone https://github.com/znz/anyenv-git.git $(anyenv root)/plugins/anyenv-git
   # 推奨されるrbenvビルド環境の構築(https://github.com/rbenv/ruby-build/wiki)
-  # Depending on your version of Ubuntu/Debian/Mint, libgdbm6 won't be available.
-  # In that case, try an earlier version such as libgdbm5.
-  sudo apt install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
+  # Depending on your OS version, libgdbm6 won't be available.
+  # In that case, try an earlier version, such as libgdbm5.
+  sudo apt install -y autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
   # 推奨されるpyenvビルド環境の構築(https://github.com/pyenv/pyenv/wiki)
-  sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+  # If you are going build PyPy from source or install other Python flavors that require CLang, also install llvm.
+  sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
   # インストールできる**envの確認
   anyenv install --list
