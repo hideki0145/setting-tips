@@ -45,4 +45,9 @@ Tips for **asdf** settings.
   asdf plugin add ***
   # インストールできたことを確認
   asdf plugin list
+
+  # rubyをインストールした際にgemを自動インストールする
+  touch ~/.default-gems
+  echo 'bundler' >> ~/.default-gems
+  echo '***' >> ~/.default-gems
   ```
