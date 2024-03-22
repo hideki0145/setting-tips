@@ -144,3 +144,32 @@
   # タイムゾーンの設定
   sudo timedatectl set-timezone Asia/Tokyo
   ```
+
+- needrestartの設定(使用する環境に合わせて任意に設定)
+
+  ```sh
+  echo "\$nrconf{restart} = 'a';" | sudo tee /etc/needrestart/conf.d/50-local.conf
+  ```
+
+- UnattendedUpgradesの設定(使用する環境に合わせて任意に設定)
+
+  ```sh
+  sudo vi /etc/apt/apt.conf.d/50unattended-upgrades
+  ```
+
+  ```config:/etc/apt/apt.conf.d/50unattended-upgrades
+    .
+    .
+  //Unattended-Upgrade::Mail "";
+  Unattended-Upgrade::Mail "username@example.com";
+    .
+    .
+  //Unattended-Upgrade::Automatic-Reboot "false";
+  Unattended-Upgrade::Automatic-Reboot "true";
+    .
+    .
+  //Unattended-Upgrade::Automatic-Reboot-Time "02:00";
+  Unattended-Upgrade::Automatic-Reboot-Time "02:30";
+    .
+    .
+  ```
